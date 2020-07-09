@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- HANDLEBARS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js" integrity="sha256-q9BGEBpMwimxUZaBkDjJSRV2Zs+HVtxB+ExrKUAtGdw=" crossorigin="anonymous"></script>
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- HEDEAR -->
+  <div class="navbar">
+    <div class="nav_left">
+      <img class="logo" src="img/logo.png" alt="">
+      <div class="option">
+        <ul class="option_ul">
+          <li class="list_option" id="home">Home</li>
+          <li class="list_option" id="film">Film</li>
+          <li class="list_option" id="serie">Serie</li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav_right">
+      <i class="fas fa-search btn_search"></i>
+      <div class="input_box">
+        <input class="input" type="text" placeholder="">
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+
+      </div>
+    </div>
+    <div class="film_search">
+      <h2 class="title_section">Film</h2>
+      <div class="wrapper">
+        <div class="container_film"></div>
+      </div>
+    </div>
+    <div class="tv_search">
+      <h2 class="title_section">Serie</h2>
+      <div class="wrapper">
+        <div class="container_tv"></div>
+      </div>
+    </div>
+    <div class="box_film">
+      <h2 class="title_section">I Film Più Popolari</h2>
+      <div class="wrapper">
+        <div class="container_popular_film"></div>
+      </div>
+    </div>
+    <div class="box_tv">
+      <h2 class="title_section">Le Serie Più Popolari</h2>
+      <div class="wrapper">
+        <div class="container_popular_tv"></div>
+      </div>
+    </div>
+    <div class="box_film">
+      <h2 class="title_section">Film Nuove Uscite</h2>
+      <div class="wrapper">
+        <div class="container_upcoming_film"></div>
+      </div>
+    </div>
+    <div class="box_tv">
+      <h2 class="title_section">Le Miglior Serie</h2>
+      <div class="wrapper">
+        <div class="container_top_tv"></div>
+      </div>
+    </div>
+    <div class="wrapper_modal">
+    </div>
+  </div>
+  <!-- TEMPLATE -->
+  <script id="film_template" type="text/x-handlebars-template">
+    <div class="card_popular" id="{{this_id}}">
+      <img class="path" src="{{{poster_path}}}" alt="">
+      <div class="info">
+        <div class="flag">{{{lang}}}</div>
+        <button class="btn_info_film">Info</button>
+        <div class="vote">{{{vote}}}</div>
+      </div>
+    </div> 
+  </script>
+
+  <script id="tv_template" type="text/x-handlebars-template">
+    <div class="card_popular" id="{{this_id}}">
+      <img class="path" src="{{{poster_path}}}" alt="">
+      <div class="info">
+        <div class="flag">{{{lang}}}</div>
+        <button class="btn_info_tv">Info</button>
+        <div class="vote">{{{vote}}}</div>
+      </div>
+    </div> 
+  </script>
+
+  <script id="modal_template" type="text/x-handlebars-template">
+    <div class="modal">
+      <i class="far fa-times-circle close"></i>
+      <div class="modal_box">
+        <img class="modal_path" src="{{{poster_path}}}" alt="">
+        <div class="modal_description">
+          <h3 class="title_info">{{title}}</h3>
+          <p class="payoff_info">{{tagline}}</p>
+          <p class="trama_info">{{overview}}</p>
+          {{#each genres}}
+            <div class="genre_info">{{name}}</div>
+          {{/each}}     
+        </div>
+      </div>
+    </div> 
+  </script>
+
+  <script id="cast_template" type="text/x-handlebars-template">
+    <h2 class="cast_title">Cast</h2>
+    <div class="cast"> 
+     {{#each cast}}
+      <div class="actor">
+        <img src="https://image.tmdb.org/t/p/w185/{{profile_path}}" alt="">
+        <div class="name_actor"><span>{{name}}</span> as</div>
+        <div class="name_character">{{character}}</div>
+      </div>
+      {{/each}}
+    </div> 
+  </script>
+
+  <script id="jumbo_template" type="text/x-handlebars-template">
+    <div class="swiper-slide jumbo">
+    <div class="info_slider">
+    <h1>{{title}}</h1>
+    <p>{{overview}}</p>
+    </div>
+    <img id="{{num_id}}" class="jumbo_path" src="{{{poster_path}}}" alt="">
+    </div>
+  </script>
+
+  <!-- SCRIPT -->
+  <script src="js/script.js"></script>
+  <!-- SWIPER -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: whitesmoke;
+}
+.none{
+  display: none;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  padding: 0 5.5%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 127, 0.7);
+} 
+.nav_left {
+  display: flex; 
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+.logo{
+  width: 200px;
+  cursor: pointer;
+  margin-right: 2em;
+}
+.option_ul {
+  list-style: none;
+  font-size: 1.2em;
+  color: rgb(43, 45, 66);
+}
+.option_ul li {
+  display: inline-block;
+  margin-right: 1em;
+  cursor: pointer;
+  font-weight: 600;
+}
+.nav_right{
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+}
+.input_box {
+  width: 0;
+  height: 0;
+  border-radius: 50px;
+}
+.input_box .input{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+}
+.btn_search {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+
+/* MAIN */
+.main{
+  overflow: scroll;
+  padding-top: 100px;
+}
+.jumbo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.jumbo_path {
+  width: 100%;
+}
+.info_slider {
+  position: absolute;
+  width: 40%;
+  margin-left: 3em;
+  padding: 3em;
+  color: aliceblue;
+  background-color: rgba(0,0,0,0.25);
+}
+.film_search,
+.tv_search{
+  display: none;
+}
+[class*='box_'],
+.film_search,
+.tv_search{
+  padding: 30px 0;
+}
+.box_tv,
+.tv_search {
+  background-color: #2B2D42;
+  
+}
+.title_section{
+  margin-bottom: 15px;
+  padding-left: 5.5%;
+  color: #2B2D42;
+}
+.box_tv .title_section,
+.tv_search .title_section {
+  color: rgb(245, 245, 245);
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+[class*='container_']{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+[class*='container_']{
+  width: 95%;
+}
+[class*='card_']{
+  margin: 5px;
+  position: relative;
+  cursor: pointer;
+}
+[class*='card_'] .path{
+  width: 95%;
+  height: 250px;
+} 
+.info{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  color: whitesmoke;
+}
+.flag img{
+  height: 30px;
+  
+}
+[class*='btn_info_'] {
+  margin: 60px 25px 50px;
+  padding: 1em 3em;
+  background-color: Transparent;
+  color: springgreen;
+  border: 2px solid springgreen;
+  outline:none;
+  border-radius: 50px;
+  font-size: .8em;
+  text-align: center;
+}
+.vote{
+  text-align: center;
+  color: yellow;
+}
+[class*='card_']:hover .path{
+ filter: blur(.7px) brightness(70%);
+ 
+}
+[class*='card_']:hover .info{
+  display: block;
+}
+.modal{
+  display: none;
+  position: fixed;
+  border-radius: 20px;
+  overflow-y: scroll;
+  top: 5%;
+  left: 50%;
+  z-index: 3;
+  transform: translateX(-50%);
+  width: 60vw;
+  height: 90vh;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 12px -7px rgba(0,0,0,0.75);;
+}
+.close{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 3em;
+  color: #2B2D42;
+}
+.modal_box{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.modal_description{
+  padding:  30px 35px;
+}
+.title_info{
+  margin-bottom: 5px;
+}
+.payoff_info{
+  margin-bottom: 15px;
+}
+.trama_info{
+  margin-bottom:15px;
+}
+.genre_info{
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom:15px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: whitesmoke;
+  background-color: rgb(0, 255, 128);
+}
+.cast_title {
+  margin-bottom: 15px;
+  color: #2B2D42;
+}
+.cast{
+  display: flex;
+  flex-wrap: wrap;
+}
+.actor{
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.name_actor span{
+  font-weight: 600;
+  color: #2B2D42;
+}
+.name_character{
+  font-weight: 600;
+  color:  #2B2D42;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1380px){
+  .modal_box{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .modal{
+    width: 100vw;
+  }
+}
