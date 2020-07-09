@@ -19,20 +19,13 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>Boolflix</title>
 </head>
 <body>
   <!-- HEDEAR -->
   <div class="navbar">
     <div class="nav_left">
       <img class="logo" src="img/logo.png" alt="">
-      <div class="option">
-        <ul class="option_ul">
-          <li class="list_option" id="home">Home</li>
-          <li class="list_option" id="film">Film</li>
-          <li class="list_option" id="serie">Serie</li>
-        </ul>
-      </div>
     </div>
     <div class="nav_right">
       <i class="fas fa-search btn_search"></i>
@@ -146,7 +139,7 @@
     <div class="swiper-slide jumbo">
     <div class="info_slider">
     <h1>{{title}}</h1>
-    <p>{{overview}}</p>
+    <p class="overview">{{overview}}</p>
     </div>
     <img id="{{num_id}}" class="jumbo_path" src="{{{poster_path}}}" alt="">
     </div>

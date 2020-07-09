@@ -59,6 +59,7 @@ function animationOption() {
       });
       close = true;
     }
+    
   });
 } // fine animationOption
 // ------------------------
@@ -411,7 +412,7 @@ function printSlider(array) {
       },
     });
   }
-} // fine function
+} // fine fprintSlider
 function printSearchFilm(array) {
   for (let j = 0; j <= array.length; j++) {
     var thisTitle = array[j];
@@ -432,7 +433,7 @@ function printSearchFilm(array) {
     var html = template(context);
     $('.container_film').append(html);
   }
-} // fine function
+} // fine printSearchFilm(
 function printSearchTv(array) {
   for (let j = 0; j <= array.length; j++) {
     var thisTitle = array[j];
@@ -453,7 +454,7 @@ function printSearchTv(array) {
     var html = template(context);
     $('.container_tv').append(html);
   }
-} // fine function
+} // fine printSearchTv
 function printPopularFilm(array) {
   for (let j = 0; j <= array.length; j++) {
     var thisTitle = array[j];
@@ -470,7 +471,7 @@ function printPopularFilm(array) {
     var html = template(context);
     $('.container_popular_film').append(html);
   }
-} // fine function
+} // fine printPopularFilm
 function printUpcomingFilm(array) {
   for (let j = 0; j <= array.length; j++) {
     var thisTitle = array[j];
@@ -510,7 +511,7 @@ function printPopularTv(array) {
     var html = template(context);
     $('.container_popular_tv').append(html);
   }
-} // fine function
+} // fine printPopularTv
 function printTopTv(array) {
   for (let j = 0; j <= array.length; j++) {
     var thisTitle = array[j];
@@ -532,7 +533,7 @@ function printTopTv(array) {
     var html = template(context);
     $('.container_top_tv').append(html);
   }
-} // fine function
+} // fine printTopTv
 function printStar(vote) {
   var vote = vote;
   var stars = "";
@@ -545,7 +546,7 @@ function printStar(vote) {
     }
   }
   return stars
-} // fine function 
+} // fine printStar 
 function flagLanguage(flags) {
   var arrayFlags = ["de", "en", "es", "fr", "it", "zh", "ja", "us", "ko", "ur"]
   if (arrayFlags.includes(flags)) {
@@ -554,6 +555,6 @@ function flagLanguage(flags) {
     var flag = flags;
   }
   return flag
-} // fine function
+} // fine printLanguage
 
 

@@ -31,21 +31,11 @@ body{
   width: 50%;
 }
 .logo{
-  width: 200px;
+  width: 10em;
   cursor: pointer;
   margin-right: 2em;
 }
-.option_ul {
-  list-style: none;
-  font-size: 1.2em;
-  color: rgb(43, 45, 66);
-}
-.option_ul li {
-  display: inline-block;
-  margin-right: 1em;
-  cursor: pointer;
-  font-weight: 600;
-}
+
 .nav_right{
   display: flex; 
   align-items: center;
@@ -85,8 +75,8 @@ body{
 .info_slider {
   position: absolute;
   width: 40%;
-  margin-left: 3em;
-  padding: 3em;
+  margin-left: 3rem;
+  padding: 3rem;
   color: aliceblue;
   background-color: rgba(0,0,0,0.25);
 }
@@ -252,5 +242,16 @@ body{
 @media screen and (max-width: 767px){
   .modal{
     width: 100vw;
+  }
+  .info_slider {
+    width: 50%;
+    margin-left: 1.5rem;
+    padding: 1.5rem;
+  }
+  .info_slider h1 {
+    font-size: 1.5em;
+  }
+  .info_slider .overview {
+    display: none;
   }
 }
